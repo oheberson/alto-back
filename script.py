@@ -154,6 +154,10 @@ for i in range(1, len_pages_pdf):
                     
                     remaining.remove(li)
                     break
+    
+    for i in remaining:
+        if len(i) == 1:
+            remaining.remove(i)
 
     for i, l in enumerate(remaining):
         if i == 4:
