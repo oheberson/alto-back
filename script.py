@@ -83,6 +83,9 @@ for i in range(1, len_pages_pdf):
     try:
         home_streak = streaks[0]
         away_streak = streaks[9]
+
+        if not (len(home_streak) == 8 and len(away_streak) == 8):
+            raise IndexError
     except IndexError:
         # skip not enough streak info
         continue
